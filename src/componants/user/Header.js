@@ -24,7 +24,7 @@ const Header = () => {
     }, [lastScrollY]);
 
     return (
-        <header className={`w-[90%] flex justify-center bg-black text-white py-3 m-10 mx-20 rounded-3xl opacity-75 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-0 w-[100%] m-0 mx-0 rounded-none'} fixed`}>
+        <header className={`w-[90%] flex justify-center bg-black text-white py-3 m-10 mx-20 rounded-3xl opacity-75 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-10 w-full m-0 -mx-0 rounded-none'} fixed`}>
             <div className="container mx-auto flex justify-between items-center px-4">
                 <div className="text-xl font-bold">
                     LOGO
