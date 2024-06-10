@@ -8,9 +8,9 @@ function App() {
     <div className="App">
        <Header />
        <body className='bg-gray-100'>
-          {/* <Product /> */}
-          <Test />
-          <Test />
+          <Product />
+          {/* <Test />
+          <Test /> */}
        </body>
     </div>
   );

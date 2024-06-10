@@ -6,10 +6,8 @@ const Header = () => {
 
     const handleScroll = () => {
         if (window.scrollY > lastScrollY) {
-            // Scrolling down
             setShowHeader(false);
         } else {
-            // Scrolling up
             setShowHeader(true);
         }
         setLastScrollY(window.scrollY);
@@ -17,14 +15,13 @@ const Header = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [lastScrollY]);
 
     return (
-        <header className={`w-[90%] flex justify-center bg-black text-white py-3 m-10 mx-20 rounded-3xl opacity-75 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-10 w-full m-0 -mx-0 rounded-none'} fixed`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-50'} ${showHeader ? 'bg-black text-white py-3 m-10 mx-20 rounded-3xl opacity-75 w-[90%]' : 'w-full bg-black text-white py-3 opacity-75 rounded-none'}`}>
             <div className="container mx-auto flex justify-between items-center px-4">
                 <div className="text-xl font-bold">
                     LOGO
