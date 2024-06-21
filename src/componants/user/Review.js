@@ -27,10 +27,10 @@ const ReviewPage = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-2xl font-bold mb-4">Reviews</h1>
+        <div className="container mx-auto px-4 py-2">
+            <h1 className="text-2xl font-bold mb-4 fixed ml-96">Reviews</h1>
             <form onSubmit={handleSubmit} className="mb-4">
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mt-10">
                     <label className="mr-4">Rating:</label>
                     {/* <Rating
                         rating={rating}

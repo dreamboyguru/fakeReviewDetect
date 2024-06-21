@@ -63,20 +63,21 @@ const Products = () => {
                 <div className="flex flex-wrap gap-3 justify-between">
                     {data && data.map(item => (
                         <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
-                            <div className="rounded overflow-hidden mb-2">
+                            <div className='bg-gray-300 rounded-t-md p-2'>
+                                <label className="block text-lg font-bold">{item.name}</label>
+                                <div className='flex flex-row justify-between items-center'>                                  
+                                </div>
+                            </div>
+                            <div className="overflow-hidden rounded-b-md">
                                 <img 
-                                    src={`${url}/uploads/item.image`} 
+                                    src={`${url}/uploads/${item.image}`} 
                                     alt={item.name}
                                     className="h-44 max-sm:h-36 w-full object-cover"
                                 />
-                            </div>
-                            <div>
-                                <label className="block text-lg font-bold mb-1">{item.name}</label>
-                                <div className='flex flex-row justify-between items-center'>
-                                    {/* <div className="text-sm text-gray-600"><span className='text-yellow-600 text-2xl'>{item.ra}</span></div> */}
-                                    
-                                </div>
-                            </div>
+                            </div>                            
+                            {/* <div>
+                                <button type='submit' className='w-full p-2 bg-gray-500 hover:bg-gray-600 text-white rounded-b-md'>Edit</button>
+                            </div> */}
                         </div>
                     ))}
                 </div>
