@@ -3,8 +3,8 @@ import ReviewPage from './Review'
 
 const ProductDetails = ({modelShow}) => {
   return (
-    <div className="absolute inset-0 flex justify-center bg-gray-950 bg-opacity-50">
-            <div className="relative bg-white rounded-lg p-8 w-2/3 mt-10">
+    <div className="inset-0 flex justify-center bg-gray-950 bg-opacity-50 z-30 fixed">
+            <div className="relative bg-white rounded-lg p-8 w-2/3 my-5">
                 <div className='absolute text-2xl right-4 top-1 hover:scale-110 text-red-600 cursor-pointer'
                     onClick={modelShow}
                 >X</div>

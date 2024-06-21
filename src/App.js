@@ -1,14 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Test from './componants/Test';
 import Header from './componants/user/Header';
 import Product from './componants/user/Product';
+import Products from './componants/admin/Products';
 
 function App() {
   return (
     <div className="App">
        <Header />
        <body className='bg-gray-100'>
-          <Product />
+          <Routes>
+            <Route path='/' element={<Product />} />
+            <Route path='admin' element={<Products />} />
+          </Routes>
+          
           {/* <Test />
           <Test /> */}
        </body>
