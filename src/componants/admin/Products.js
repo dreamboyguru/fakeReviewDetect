@@ -6,6 +6,7 @@ const Products = () => {
     const url = process.env.REACT_APP_API_URL
     const [data, setData] = useState(false);
     const [box, setBox] = useState(false);
+    const [load, setLoad] = useState(false);
 
     useEffect(()=> {
         const fetchData = async() => {
@@ -44,8 +45,18 @@ const Products = () => {
             }
         }
         fetchData();
-      }, []);
-     
+        setLoad(false);
+    }, [load]);
+
+    const handleDelete = (id) => {
+        axios.delete(`${url}/api/products/${id}`)
+            .then(response => {
+                console.log(response.data);
+                setLoad(true);
+            })
+            .catch(err => console.log(err))
+    }
+
     const ToggleBox = () =>{
         setBox(!box)
     }
@@ -63,6 +74,12 @@ const Products = () => {
                 <div className="flex flex-wrap gap-3 justify-between">
                     {data && data.map(item => (
                         <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                            <div className='relative'>
+                                <div 
+                                    className='absolute text-2xl text-red-600 -right-1.5 -top-4 hover:cursor-pointer hover:scale-110 transform duration-500'
+                                    onClick={()=>handleDelete(item.id)}
+                                >X</div>
+                            </div>
                             <div className='bg-gray-300 rounded-t-md p-2'>
                                 <label className="block text-lg font-bold">{item.name}</label>
                                 <div className='flex flex-row justify-between items-center'>                                  

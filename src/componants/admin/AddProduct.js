@@ -42,7 +42,7 @@ const AddProduct = ({ToggleBox}) => {
   return (
     <div className='fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50 '>
       <div className='relative w-2/3 max-w-md h-auto bg-white rounded-md shadow-lg p-6'>
-        <div className='absolute top-2 right-4 hover:scale-110' onClick={ToggleBox}>X</div>
+        <div className='absolute text-2xl text-red-600 top-2 right-4 hover:cursor-pointer hover:scale-125' onClick={ToggleBox}>X</div>
         <div className='mb-4 text-center'>
           <h2 className='text-2xl font-semibold'>Add New Product</h2>
         </div>
