@@ -33,7 +33,7 @@ const ProductDetails = ({data, modelShow}) => {
                                 <span className='font-semibold'>Rating : </span>
                                 <span className='flex justify-center w-1/2 text-yellow-600 text-2xl'><Rating value={avgToggle(data.rating) || 0} /></span> 
                             </span>
-                            <label><span className='font-semibold'>Name : </span>{data.rating !== null ? data.rating.split(',').length : 1}</label>
+                            <label><span className='font-semibold'>Total Reviews : </span>{data.rating !== null ? data.rating.split(',').length : 0}</label>
                             <h1><span className='font-semibold'>Product Details : </span><span>In marketing, a product is an object, or system, or service made available for consumer use as of the consumer demand; it is anything that can be offered to a market to satisfy the desire or need of a customer.</span></h1>
                         </div>
                     </div>

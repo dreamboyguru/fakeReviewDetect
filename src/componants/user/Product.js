@@ -4,6 +4,7 @@ import axios from 'axios';
 import Rating from '../Rating';
 
 const Product = () => {
+    localStorage.setItem('admin', false);
     const addReview = localStorage.getItem('addReview') || false;
     const url = process.env.REACT_APP_API_URL
     const [productDetailsBox, setProductDetailsBox] = useState(false);

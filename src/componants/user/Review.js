@@ -8,6 +8,18 @@ const ReviewPage = (data) => {
     const [newReview, setNewReview] = useState('');
     const [rating, setRating] = useState(0);
     const [load, setLoad] = useState(false);
+    const [ip, setIp] = useState('');
+
+    useEffect(() => {
+        axios.get('https://api.ipify.org?format=json')
+          .then(response => {
+            setIp(response.data.ip);
+          })
+          .catch(error => {
+            console.error("There was an error fetching the IP address!", error);
+          });
+      }, []);
+
 
     const handleChange = (event) => {
         setNewReview(event.target.value);
@@ -31,7 +43,8 @@ const ReviewPage = (data) => {
             const reviewObject = {
                 id : data.value.id,
                 review: newReview,
-                rating: parseFloat(rating)
+                rating: parseFloat(rating),
+                ip : ip
             };
     
             try {
