@@ -27,7 +27,7 @@ const AddProduct = ({ToggleBox}) => {
 
     setLoad(true);
 
-    axios.post('http://localhost:5000/api/products', formData)
+    axios.post('http://localhost:3000/api/products', formData)
       .then(response => {
         console.log(response.data);
         window.location.reload();

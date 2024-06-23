@@ -7,7 +7,7 @@ const Product = () => {
     const addReview = localStorage.getItem('addReview') || false;
     const url = process.env.REACT_APP_API_URL
     const [productDetailsBox, setProductDetailsBox] = useState(false);
-    const [productData, setProductData] = useState([])
+    const [productData, setProductData] = useState()
     const [data, setData] = useState('')
     useEffect(()=> {
         const fetchData = async() => {
@@ -58,7 +58,7 @@ const Product = () => {
 
     return (
         <>
-            { productData !== '' ? 
+            { productData ? 
                 <section className="p-10 pt-28 max-md:p-0 max-md:pt-24">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>

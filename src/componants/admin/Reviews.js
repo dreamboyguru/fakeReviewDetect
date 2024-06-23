@@ -90,8 +90,8 @@ const Reviews = ({ReviewsToggleBox}) => {
                                         <td className="py-2 px-4 border-b">{review.total}</td>
                                         <td className="py-2 px-4 border-b">{review.user_IP_adress}</td>
                                         <td className="py-2 px-4 border-b">{vagRatingCalculate(review.ratings)}</td>
-                                        <td className="py-2 px-4 border-b text-green-600"
-                                            onClick={()=>deleteMultipleResources(review.ids)}>Active</td>
+                                        <td className="py-2 px-4 border-b text-red-600 cursor-pointer hover:text-red-700 hover:scale-110"
+                                            onClick={()=>deleteMultipleResources(review.ids)}>Delete</td>
                                     </tr>
                                 ))}
                             </tbody>
