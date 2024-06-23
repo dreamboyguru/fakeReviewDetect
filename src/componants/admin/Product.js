@@ -19,32 +19,32 @@ const Products = () => {
                 setData(response.data)
             } catch (err) {
                 console.log(err);
-                setData([
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '4.7' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
-                ])
+                // setData([
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '4.7' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rate: '*****' },
+                // ])
             }
         }
         fetchData();
@@ -71,46 +71,52 @@ const Products = () => {
         {box && <AddProduct ToggleBox={ToggleBox}/> }
         {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> }
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-32 fixed`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-32 fixed`}
             onClick={()=>ToggleBox()}            
         >Add New</button>
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } fixed`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } fixed`}
             onClick={()=>ReviewsToggleBox()}            
         >Reviews</button>
 
-
-        <section className={`p-10 pt-40 max-md:p-0 max-md:pt-20 ${box ? 'blur -mt-20 z-20' : '' }`}>
-            <div className="rounded-lg p-1 ">
-                <div className="flex flex-wrap gap-3 justify-between">
-                    {data && data.map(item => (
-                        <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
-                            <div className='relative'>
-                                <div 
-                                    className='absolute text-2xl text-red-600 -right-1.5 -top-4 hover:cursor-pointer hover:scale-110 transform duration-500'
-                                    onClick={()=>handleDelete(item.id)}
-                                >X</div>
-                            </div>
-                            <div className='bg-gray-300 rounded-t-md p-2'>
-                                <label className="block text-lg font-bold">{item.name}</label>
-                                <div className='flex flex-row justify-between items-center'>                                  
+        {data ? 
+            <section className={`p-10 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>
+                <div className="rounded-lg p-1 ">
+                    <div className="flex flex-wrap gap-3 justify-between">
+                        {data && data.map(item => (
+                            <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                                <div className='relative'>
+                                    <div 
+                                        className='absolute text-2xl text-red-600 -right-1.5 -top-4 hover:cursor-pointer hover:scale-110 transform duration-500'
+                                        onClick={()=>handleDelete(item.id)}
+                                    >X</div>
                                 </div>
+                                <div className='bg-gray-300 rounded-t-md p-2'>
+                                    <label className="block text-lg font-bold">{item.name}</label>
+                                    <div className='flex flex-row justify-between items-center'>                                  
+                                    </div>
+                                </div>
+                                <div className="overflow-hidden rounded-b-md">
+                                    <img 
+                                        src={`${url}/uploads/${item.image}`} 
+                                        alt={item.name}
+                                        className="h-44 max-sm:h-36 w-full object-cover"
+                                    />
+                                </div>                            
+                                {/* <div>
+                                    <button type='submit' className='w-full p-2 bg-gray-500 hover:bg-gray-600 text-white rounded-b-md'>Edit</button>
+                                </div> */}
                             </div>
-                            <div className="overflow-hidden rounded-b-md">
-                                <img 
-                                    src={`${url}/uploads/${item.image}`} 
-                                    alt={item.name}
-                                    className="h-44 max-sm:h-36 w-full object-cover"
-                                />
-                            </div>                            
-                            {/* <div>
-                                <button type='submit' className='w-full p-2 bg-gray-500 hover:bg-gray-600 text-white rounded-b-md'>Edit</button>
-                            </div> */}
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                </div>
+            </section> :
+            <div className="h-screen flex justify-center items-center">
+                <div className="text-center text-gray-500 text-xl">
+                    No Product Detected
                 </div>
             </div>
-        </section>
+        }
 
     </div>
   )

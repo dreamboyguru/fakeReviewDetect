@@ -4,7 +4,6 @@ import axios from 'axios';
 import Rating from '../Rating';
 
 const Product = () => {
-    localStorage.setItem('admin', false);
     const addReview = localStorage.getItem('addReview') || false;
     const url = process.env.REACT_APP_API_URL
     const [productDetailsBox, setProductDetailsBox] = useState(false);
@@ -18,20 +17,20 @@ const Product = () => {
                 setProductData(response.data)
             } catch (err) {
                 console.log(err);
-                setProductData([
-                    { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 2, name: 'test2', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '2' },
-                    { id: 3, name: 'Heaven3', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4' },
-                    { id: 4, name: 'test4', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 5, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '2.4' },
-                    { id: 6, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 7, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 8, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 9, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 10, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 11, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
-                    { id: 12, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' }
-                ])
+                // setProductData([
+                //     { id: 1, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 2, name: 'test2', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '2' },
+                //     { id: 3, name: 'Heaven3', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4' },
+                //     { id: 4, name: 'test4', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 5, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '2.4' },
+                //     { id: 6, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 7, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 8, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 9, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 10, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 11, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' },
+                //     { id: 12, name: 'Heaven', image: 'https://www.tamilnadutourism.tn.gov.in/img/pages/vertical/tiger-hill-1680516074_a0a74c97dfcd912c936f.webp', rating: '4.7' }
+                // ])
             }
         }
         fetchData();
@@ -58,39 +57,48 @@ const Product = () => {
     
 
     return (
-        <section className="p-10 pt-28 max-md:p-0 max-md:pt-24">
-            {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
-            <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
-                <div className="flex flex-wrap gap-3 justify-between">
-                    {productData && productData.map(item => (
-                        <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
-                            <div className="rounded overflow-hidden mb-2">
-                                <img 
-                                    src={`${url}/uploads/${item.image}`} 
-                                    alt={item.name}
-                                    className="h-44 max-sm:h-36 w-full object-cover"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-lg font-bold mb-1">{item.name}</label>
-                                <div className='flex flex-row justify-between items-center'>
-                                    <div className="text-gray-600 w-24">
-                                        <span className='text-yellow-600'>
-                                            <Rating value={avgToggle(item.rating)} />
-                                        </span>
-
+        <>
+            { productData !== '' ? 
+                <section className="p-10 pt-28 max-md:p-0 max-md:pt-24">
+                    {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
+                    <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
+                        <div className="flex flex-wrap gap-3 justify-between">
+                            {productData && productData.map(item => (
+                                <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                                    <div className="rounded overflow-hidden mb-2">
+                                        <img 
+                                            src={`${url}/uploads/${item.image}`} 
+                                            alt={item.name}
+                                            className="h-44 max-sm:h-36 w-full object-cover"
+                                        />
                                     </div>
-                                    <span 
-                                        onClick={()=>productDetailsShow(item)} 
-                                        className="text-blue-500 hover:cursor-pointer hover:underline"
-                                    >Details</span>
+                                    <div>
+                                        <label className="block text-lg font-bold mb-1">{item.name}</label>
+                                        <div className='flex flex-row justify-between items-center'>
+                                            <div className="text-gray-600 w-24">
+                                                <span className='text-yellow-600'>
+                                                    <Rating value={avgToggle(item.rating)} />
+                                                </span>
+
+                                            </div>
+                                            <span 
+                                                onClick={()=>productDetailsShow(item)} 
+                                                className="text-blue-500 hover:cursor-pointer hover:underline"
+                                            >Details</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                </section> :
+                <div className="h-screen flex justify-center items-center border-2">
+                    <div className="text-center text-gray-500 text-xl">
+                        No Product Detected
+                    </div>
                 </div>
-            </div>
-        </section>
+            }
+        </>
     );
 };
 
