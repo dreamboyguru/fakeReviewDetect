@@ -4,9 +4,8 @@ import * as Yup from 'yup';
 import axios from 'axios';
 
 const AddProduct = ({ToggleBox}) => {
+  const url = process.env.REACT_APP_API_URL
   const [load, setLoad] = useState(false);
-  
-
   const initialValues = {
     productName: '',
     productImage: null
@@ -27,7 +26,7 @@ const AddProduct = ({ToggleBox}) => {
 
     setLoad(true);
 
-    axios.post('http://localhost:3000/api/products', formData)
+    axios.post(`${url}/api/products`, formData)
       .then(response => {
         console.log(response.data);
         window.location.reload();
