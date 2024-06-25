@@ -52,6 +52,7 @@ const ReviewPage = (data) => {
                 setNewReview('');
                 setRating(0);
                 localStorage.setItem('addReview', true)
+                alert('Your review added.')
             } catch (error) {
                 console.error("Error submitting review:", error);
             }

@@ -59,10 +59,10 @@ const Product = () => {
     return (
         <>
             { productData ? 
-                <section className="p-10 pt-28 max-md:p-0 max-md:pt-24">
+                <section className="p-10 pt-28 max-md:p-0 max-md:pt-24 h-auto min-h-screen">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
-                        <div className="flex flex-wrap gap-3 justify-between">
+                        <div className="flex flex-wrap gap-3 justify-left">
                             {productData && productData.map(item => (
                                 <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                     <div className="rounded overflow-hidden mb-2">

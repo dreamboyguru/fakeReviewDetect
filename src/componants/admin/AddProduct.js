@@ -28,6 +28,7 @@ const AddProduct = ({ToggleBox}) => {
 
     axios.post(`${url}/api/products`, formData)
       .then(response => {
+        alert('Product added successfully')
         console.log(response.data);
         window.location.reload();
       })

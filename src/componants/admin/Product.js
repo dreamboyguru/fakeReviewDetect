@@ -52,12 +52,18 @@ const Products = () => {
     }, [load]);
 
     const handleDelete = (id) => {
-        axios.delete(`${url}/api/products/${id}`)
-            .then(response => {
-                console.log(response.data);
-                setLoad(true);
-            })
-            .catch(err => console.log(err))
+        let userResponse = window.confirm("Are you sure you want to delete this item?");
+        if (userResponse) {
+            axios.delete(`${url}/api/products/${id}`)
+                .then(response => {
+                    console.log(response.data);
+                    setLoad(true);
+                })
+                .catch(err => console.log(err))
+        } else {
+            alert("Delete canceled.");
+        }
+        
     }
 
     const ToggleBox = () =>{
@@ -82,7 +88,7 @@ const Products = () => {
         {data ? 
             <section className={`p-10 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>
                 <div className="rounded-lg p-1 ">
-                    <div className="flex flex-wrap gap-3 justify-between">
+                    <div className="flex flex-wrap gap-3 justify-left">
                         {data && data.map(item => (
                             <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                 <div className='relative'>

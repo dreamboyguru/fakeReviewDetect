@@ -38,29 +38,35 @@ const Reviews = ({ReviewsToggleBox}) => {
 
     // Function to delete multiple resources by IDs
     async function deleteMultipleResources(ids) {
-        setLoad(true)
-        let idsArray = ids.split(',');
-        let numArray = idsArray.map(numStr => parseInt(numStr));
+        
+        let userResponse = window.confirm("Are you sure you want to delete Fake reviews..?");
+        if (userResponse) {
+            setLoad(true)
+            let idsArray = ids.split(',');
+            let numArray = idsArray.map(numStr => parseInt(numStr));
 
-        try {
-            // Create an array of delete requests
-            const deletePromises = numArray.map(id => axios.delete(`${url}/api/fake/reviews/${id}`));
-            
-            // Wait for all delete requests to complete
-            const responses = await Promise.all(deletePromises);
+            try {
+                // Create an array of delete requests
+                const deletePromises = numArray.map(id => axios.delete(`${url}/api/fake/reviews/${id}`));
+                
+                // Wait for all delete requests to complete
+                const responses = await Promise.all(deletePromises);
 
-            // Handle successful responses
-            responses.forEach(response => {
-                console.log(`Deleted: ${response.config.url} - Status: ${response.status}`);
-            });
+                // Handle successful responses
+                responses.forEach(response => {
+                    console.log(`Deleted: ${response.config.url} - Status: ${response.status}`);
+                });
 
-        } catch (error) {
-            // Handle errors
-            if (error.response) {
-                console.error(`Error deleting ${error.response.config.url}: ${error.response.status} - ${error.response.statusText}`);
-            } else {
-                console.error(`Error: ${error.message}`);
+            } catch (error) {
+                // Handle errors
+                if (error.response) {
+                    console.error(`Error deleting ${error.response.config.url}: ${error.response.status} - ${error.response.statusText}`);
+                } else {
+                    console.error(`Error: ${error.message}`);
+                }
             }
+        } else {
+            alert("Delete canceled.");
         }
     }
 
