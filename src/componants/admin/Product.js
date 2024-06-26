@@ -8,7 +8,7 @@ const Products = () => {
     const url = process.env.REACT_APP_API_URL
     const [data, setData] = useState(false);
     const [box, setBox] = useState(false);
-    const [reviewsBox, setReviewsBox] = useState(false);
+    // const [reviewsBox, setReviewsBox] = useState(false);
     const [load, setLoad] = useState(false);
 
     useEffect(()=> {
@@ -61,7 +61,7 @@ const Products = () => {
                 })
                 .catch(err => console.log(err))
         } else {
-            alert("Delete canceled.");
+            console.log("Delete canceled.");
         }
         
     }
@@ -69,21 +69,21 @@ const Products = () => {
     const ToggleBox = () =>{
         setBox(!box)
     }
-    const ReviewsToggleBox = () => {
-        setReviewsBox(!reviewsBox);
-    }
+    // const ReviewsToggleBox = () => {
+    //     setReviewsBox(!reviewsBox);
+    // }
   return (
     <div className={`bg-gray-100 w-full h-screen`}>
         {box && <AddProduct ToggleBox={ToggleBox}/> }
-        {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> }
+        {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> } */}
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-32 fixed`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 fixed`}
             onClick={()=>ToggleBox()}            
         >Add New</button>
-        <button 
+        {/* <button 
             className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } fixed`}
             onClick={()=>ReviewsToggleBox()}            
-        >Reviews</button>
+        >Reviews</button> */}
 
         {data ? 
             <section className={`p-10 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>

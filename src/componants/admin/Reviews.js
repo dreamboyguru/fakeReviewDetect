@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 
 // Sample review data
@@ -11,7 +12,7 @@ import 'tailwindcss/tailwind.css';
 //     { productId: '5', ipAddress: '192.168.0.2', reviewDetails: 'Terrible experience.' }
 // ];
 
-const Reviews = ({ReviewsToggleBox}) => {
+const Reviews = ({}) => {
     const url = process.env.REACT_APP_API_URL;
     const [fakeReviews, setFakeReviews] = useState([]);
     const [load, setLoad] = useState(false);
@@ -66,18 +67,17 @@ const Reviews = ({ReviewsToggleBox}) => {
                 }
             }
         } else {
-            alert("Delete canceled.");
+            console.log("Delete canceled.");
         }
     }
 
     return (
         <div className="flex justify-center items-center">                       
-            <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 overflow-y-auto z-40">
+            <div className="fixed inset-0 flex justify-center mt-28 overflow-y-auto">
                 <div className="bg-white rounded-lg p-6 w-full mx-52 max-md:mx-2 min-h-96 shadow-lg">
                     <div className='relative'>
                         <div className='absolute -top-5 -right-2 text-2xl text-red-600 z-50 cursor-pointer hover:scale-110'
-                            onClick={ReviewsToggleBox}
-                        >X</div>
+                        ><Link to='/admin' >X</Link></div>
                     </div>
                     <h2 className="text-xl font-bold mb-4">Fake Reviews</h2>
                     {fakeReviews.length > 0 ? (
