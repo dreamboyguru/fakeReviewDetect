@@ -61,8 +61,8 @@ const Register = () => {
                             <input type="hidden" name="remember" defaultValue="true" />
                             {errors.general && <div className='text-red-600'>{errors.general}</div>}
                             <div className="rounded-md shadow-sm -space-y-px">
-                                <div>
-                                    <ErrorMessage name="name" component="div" className="text-red-600" />
+                                <div className='relative'>
+                                    <ErrorMessage name="name" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" />
                                     <label htmlFor="name" className="sr-only">Name</label>
                                     <Field
                                         id="name"
@@ -72,8 +72,8 @@ const Register = () => {
                                         placeholder="Name"
                                     />
                                 </div>
-                                <div>
-                                    <ErrorMessage name="phone" component="div" className="text-red-600" />
+                                <div className='relative'>
+                                    <ErrorMessage name="phone" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" />
                                     <label htmlFor="phone" className="sr-only">Phone</label>
                                     <Field
                                         id="phone"
@@ -83,8 +83,8 @@ const Register = () => {
                                         placeholder="Phone"
                                     />
                                 </div>
-                                <div>
-                                    <ErrorMessage name="email" component="div" className="text-red-600" />
+                                <div className='relative'>
+                                    <ErrorMessage name="email" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" />
                                     {Err && <div className='text-red-600'>{Err}</div>}
                                     <label htmlFor="email" className="sr-only">Email address</label>
                                     <Field
@@ -95,8 +95,8 @@ const Register = () => {
                                         placeholder="Email address"
                                     />
                                 </div>
-                                <div>
-                                    <ErrorMessage name="password" component="div" className="text-red-600" />
+                                <div className='relative'>
+                                    <ErrorMessage name="password" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" />
                                     <label htmlFor="password" className="sr-only">Password</label>
                                     <Field
                                         id="password"
@@ -106,14 +106,14 @@ const Register = () => {
                                         placeholder="Password"
                                     />
                                 </div>
-                                <div>
-                                    <ErrorMessage name="repassword" component="div" className="text-red-600" />
+                                <div className='relative'>
+                                    <ErrorMessage name="repassword" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" />
                                     <label htmlFor="repassword" className="sr-only">Confirm Password</label>
                                     <Field
                                         id="repassword"
                                         name="repassword"
                                         type="password"
-                                        className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                        className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-b-md"
                                         placeholder="Confirm Password"
                                     />
                                 </div>
@@ -121,7 +121,7 @@ const Register = () => {
 
                             <div className="flex items-center justify-between">
                                 <div className="flex felx-col items-center">
-                                    {/* <ErrorMessage name="rememberMe" component="div" className="text-red-600" /> */}
+                                    {/* <ErrorMessage name="rememberMe" component="div" className="text-red-600 bg-white px-2 absolute -top-2.5 right-6 z-30" /> */}
                                     <Field
                                         id="rememberMe"
                                         name="rememberMe"

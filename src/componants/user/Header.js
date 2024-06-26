@@ -45,7 +45,7 @@ const Header = () => {
                         </ul>
                     </nav> */}
                     
-                    <p className='flex justify-center text-xl max-md:text-sm font-bold w-full md:-ml-20 '>Wellcome {userData?.name}</p>
+                    <p className='flex justify-center text-xl max-md:text-sm font-bold w-full md:ml-20 '>Wellcome {userData?.name}</p>
                     <nav className="flex space-x-6">
                         <ul className="flex space-x-6">
                             <Link to='/' className="cursor-pointer">Home</Link>
