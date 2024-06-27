@@ -78,7 +78,7 @@ const Products = () => {
         {box && <AddProduct ToggleBox={ToggleBox}/> }
         {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> } */}
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 max-md:-ml-12 fixed z-20 opacity-90`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-16 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-16 max-md:-ml-12 fixed z-20 opacity-90`}
             onClick={()=>ToggleBox()}            
         >Add New</button>
         {/* <button 
@@ -87,11 +87,11 @@ const Products = () => {
         >Reviews</button> */}
 
         {data ? 
-            <section className={`py-10 pl-12 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>
+            <section className={`py-10 pl-12 pt-40 max-md:p-0 max-md:pt-28 ${box ? 'blur -mt-20 z-20' : '' }`}>
                 <div className="rounded-lg p-1 ">
                     <div className="flex flex-wrap gap-4 justify-left">
                         {data && data.map(item => (
-                            <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                            <div className="w-56 max-md:w-48 max-sm:w-[48%] bg-white p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                 <div className='relative'>
                                     <div 
                                         className='absolute text-2xl text-red-600 -right-1.5 -top-2 hover:cursor-pointer hover:scale-110 transform duration-500 z-10'

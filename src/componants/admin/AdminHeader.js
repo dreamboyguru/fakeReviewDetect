@@ -55,7 +55,7 @@ const AdminHeader = () => {
             {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> }             */}
             <header className={`fixed top-0 left-0 right-0 z-20 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-50'} ${showHeader ? 'bg-black text-white py-3 md:m-10 md:mx-20 md:rounded-3xl opacity-75 md:w-[90%]' : 'w-full bg-black text-white py-3 opacity-75 rounded-none'} z-20`}>
                 <div className="container mx-auto flex justify-between items-center px-4">
-                    <div className="text-xl font-bold font-serif underline text-cyan-300">
+                    <div className="text-xl font-bold font-serif underline text-cyan-300 ml-5">
                         <Link to='admin'>FRD</Link>
                     </div>
                     {/* <nav className="flex space-x-6">
@@ -64,7 +64,7 @@ const AdminHeader = () => {
                             <li className="hover:underline cursor-pointer">Review</li>
                         </ul>
                     </nav> */}
-                    <p className='flex justify-center pl-32 text-xl max-md:text-lg max-md:mx-5 font-bold w-full max-md:hidden'>Wellcome Admin</p>
+                    <p className='flex justify-center pl-40 text-xl max-md:text-lg max-md:mx-5 font-bold w-full max-md:hidden'>Wellcome Admin</p>
                     <nav className="flex space-x-6">
                         <ul className="flex space-x-6">
                             

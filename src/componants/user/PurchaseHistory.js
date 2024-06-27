@@ -23,7 +23,7 @@ const PurchaseHistory = () => {
   };
 
   return (
-    <div className="w-[90%] max-md:w-[98%] mx-20 max-md:mx-1 pt-28 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <div className="w-[90%] max-md:w-[98%] mx-20 max-md:mx-1 pt-28 max-md:pt-16 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {purchases.map((purchase) => (
         <div key={purchase.id} className="bg-white flex flex-row shadow-md rounded-md overflow-hidden p-2">
           <div className='w-1/2 h-44 border-r-2'>

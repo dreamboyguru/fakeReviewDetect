@@ -75,12 +75,12 @@ const Product = () => {
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
                         <div className="flex flex-wrap gap-2 justify-left">
-                            <div className='absolute top-24 max-md:top-16 left-1/3 ml-28 max-md:-ml-10'>
+                            <div className='absolute top-24 max-md:top-16 left-1/3 ml-40 max-md:-ml-10'>
                                 <Dropdown name='abc' selectedValue={selectedValue} handleChange={handleChange} options={options} />
                             </div>
                             {productData && productData.map(item => (
                                 (item.type === selectedValue || selectedValue === '') && 
-                                <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                                <div className="w-56 max-md:w-48 max-sm:w-[48%] max-md:ml-0.5  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                     <div className="rounded overflow-hidden mb-2">
                                         <img 
                                             src={`${url}/uploads/${item.image}`} 
