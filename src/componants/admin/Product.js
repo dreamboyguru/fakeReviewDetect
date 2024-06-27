@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AddProduct from './AddProduct';
 import axios from 'axios';
 import Reviews from './Reviews';
+import { IoMdCloseCircle } from 'react-icons/io';
 
 const Products = () => {
     localStorage.setItem('admin', true);
@@ -77,7 +78,7 @@ const Products = () => {
         {box && <AddProduct ToggleBox={ToggleBox}/> }
         {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> } */}
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 max-md:-ml-12 fixed`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 max-md:-ml-12 fixed z-20 opacity-90`}
             onClick={()=>ToggleBox()}            
         >Add New</button>
         {/* <button 
@@ -93,9 +94,9 @@ const Products = () => {
                             <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                 <div className='relative'>
                                     <div 
-                                        className='absolute text-2xl text-red-600 -right-1.5 -top-4 hover:cursor-pointer hover:scale-110 transform duration-500'
+                                        className='absolute text-2xl text-red-600 -right-1.5 -top-2 hover:cursor-pointer hover:scale-110 transform duration-500 z-10'
                                         onClick={()=>handleDelete(item.id)}
-                                    >X</div>
+                                    ><IoMdCloseCircle className='bg-white rounded-full'/></div>
                                 </div>
                                 <div className='bg-gray-300 rounded-t-md p-2'>
                                     <label className="block text-lg font-bold">{item.name}</label>

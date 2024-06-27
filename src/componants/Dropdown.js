@@ -11,7 +11,7 @@ const Dropdown = ({ name, selectedValue, handleChange, options }) => {
         onChange={handleChange}
         className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
       >
-        <option value="" disabled>Choose Product type</option>
+        <option value="" className='bg-gray-400' disabled={name === 'abc'}>Choose Product type</option>
         {options.map((option, index) => (
           <option key={index} value={option.value}>{option.label}</option>
         ))}

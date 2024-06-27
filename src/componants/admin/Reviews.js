@@ -75,12 +75,12 @@ const Reviews = ({}) => {
         <>
             {fakeReviews.length > 0 ?
                 <div className="flex justify-center items-center">                       
-                    <div className="fixed inset-0 flex justify-center mt-28 overflow-y-auto">
-                        <div className="bg-white rounded-lg p-6 w-full mx-52 max-md:mx-2 min-h-96 shadow-lg">
-                            <div className='relative'>
+                    <div className="fixed inset-0 flex justify-center mt-24 overflow-y-auto">
+                        <div className="bg-white rounded-lg p-6 w-2/3  mx-auto max-md:mx-2 min-h-96 shadow-lg">
+                            {/* <div className='relative'>
                                 <div className='absolute -top-5 -right-2 text-2xl text-red-600 z-50 cursor-pointer hover:scale-110'
                                 ><Link to='/admin' >X</Link></div>
-                            </div>
+                            </div> */}
                             <h2 className="text-xl font-bold mb-4">Fake Reviews</h2>
                             {fakeReviews.length > 0 ? (
                                 <table className="min-w-full bg-white border border-gray-200">

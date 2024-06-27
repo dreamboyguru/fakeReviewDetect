@@ -42,7 +42,8 @@ const AddProduct = ({ ToggleBox }) => {
     formData.append('productRate', values.productRate);
     formData.append('productImage', values.productImage);
 
-    console.log(formData);
+    // console.log(formData);
+    // console.log(values);
 
     setLoad(true);
 

@@ -75,7 +75,7 @@ const Product = () => {
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
                         <div className="flex flex-wrap gap-2 justify-left">
-                            <div className='absolute top-24 max-md:top-16 left-1/3 ml-40 max-md:-ml-10'>
+                            <div className='absolute top-24 max-md:top-16 left-1/3 ml-28 max-md:-ml-10'>
                                 <Dropdown name='abc' selectedValue={selectedValue} handleChange={handleChange} options={options} />
                             </div>
                             {productData && productData.map(item => (
