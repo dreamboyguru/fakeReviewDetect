@@ -73,7 +73,7 @@ const Products = () => {
     //     setReviewsBox(!reviewsBox);
     // }
   return (
-    <div className={`bg-gray-100 w-full h-screen`}>
+    <div className={`bg-gray-100 w-full h-auto min-h-screen`}>
         {box && <AddProduct ToggleBox={ToggleBox}/> }
         {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> } */}
         <button 
@@ -86,9 +86,9 @@ const Products = () => {
         >Reviews</button> */}
 
         {data ? 
-            <section className={`p-10 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>
+            <section className={`py-10 pl-12 pt-40 max-md:p-0 max-md:pt-36 ${box ? 'blur -mt-20 z-20' : '' }`}>
                 <div className="rounded-lg p-1 ">
-                    <div className="flex flex-wrap gap-3 justify-left">
+                    <div className="flex flex-wrap gap-4 justify-left">
                         {data && data.map(item => (
                             <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                 <div className='relative'>
@@ -106,7 +106,7 @@ const Products = () => {
                                     <img 
                                         src={`${url}/uploads/${item.image}`} 
                                         alt={item.name}
-                                        className="h-44 max-sm:h-36 w-full object-cover"
+                                        className="h-52 max-sm:h-36 w-full object-cove"
                                     />
                                 </div>                            
                                 {/* <div>

@@ -71,11 +71,11 @@ const Product = () => {
     return (
         <>
             { productData ? 
-                <section className="p-14 pt-36 max-md:p-0 max-md:pt-24 h-auto min-h-screen">
+                <section className="py-14 pl-16 pt-36 max-md:p-0 max-md:pt-28 h-auto min-h-screen">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
                         <div className="flex flex-wrap gap-2 justify-left">
-                            <div className='absolute top-24 left-1/3 ml-40'>
+                            <div className='absolute top-24 max-md:top-16 left-1/3 ml-40 max-md:-ml-10'>
                                 <Dropdown name='abc' selectedValue={selectedValue} handleChange={handleChange} options={options} />
                             </div>
                             {productData && productData.map(item => (
