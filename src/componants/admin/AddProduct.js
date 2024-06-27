@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import Dropdown from '../Dropdown';
+import { IoClose } from 'react-icons/io5';
 
 const AddProduct = ({ ToggleBox }) => {
   const url = process.env.REACT_APP_API_URL;
@@ -64,8 +65,8 @@ const AddProduct = ({ ToggleBox }) => {
   return (
     <div className='fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50'>
       <div className='relative w-2/3 max-w-md max-md:w-full max-md:mx-1 h-auto bg-white rounded-md shadow-lg p-6'>
-        <div className='absolute text-2xl text-red-600 top-2 right-4 hover:cursor-pointer hover:scale-125' onClick={ToggleBox}>
-          X
+        <div className='absolute text-3xl text-red-600 top-1 right-1 hover:cursor-pointer hover:scale-125' onClick={ToggleBox}>
+          <IoClose />
         </div>
         <div className='mb-2 pb-0.5 text-center border-b-2 -mx-5 border-gray-200'>
           <h2 className='text-2xl font-semibold'>Add New Product</h2>
