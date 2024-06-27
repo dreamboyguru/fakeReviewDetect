@@ -3,6 +3,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Reviews from './Reviews';
 import Product from './Product';
 import AddProduct from './AddProduct';
+import SalesTable from './SalesTable';
 
 const AdminHeader = () => {
     const navigate = useNavigate();
@@ -63,7 +64,7 @@ const AdminHeader = () => {
                             <li className="hover:underline cursor-pointer">Review</li>
                         </ul>
                     </nav> */}
-                    <p className='flex justify-center pl-12 text-xl max-md:text-lg max-md:mx-5 font-bold w-full max-md:hidden'>Wellcome Admin</p>
+                    <p className='flex justify-center pl-32 text-xl max-md:text-lg max-md:mx-5 font-bold w-full max-md:hidden'>Wellcome Admin</p>
                     <nav className="flex space-x-6">
                         <ul className="flex space-x-6">
                             
@@ -71,6 +72,10 @@ const AdminHeader = () => {
                                 // onClick={()=>ToggleBox()} 
                                 className="cursor-pointer"
                             >Home</Link>
+                            <Link to='sales' 
+                                // onClick={()=>ToggleBox()} 
+                                className="cursor-pointer"
+                            >Sales</Link>
                             {/* <li 
                                 onClick={()=>ToggleBox()} 
                                 className="cursor-pointer w-20"
@@ -91,6 +96,7 @@ const AdminHeader = () => {
                 <Routes>
                     <Route path='/admin' element={<Product />} />
                     <Route path='/review' element={<Reviews />} />
+                    <Route path='/sales' element={<SalesTable />} />
                 </Routes>
                 
             </body>

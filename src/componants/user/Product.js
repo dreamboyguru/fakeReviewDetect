@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProductDetails from './ProductDetails';
 import axios from 'axios';
 import Rating from '../Rating';
+import Dropdown from '../Dropdown';
 
 const Product = () => {
     const addReview = localStorage.getItem('addReview') || false;
@@ -9,11 +10,12 @@ const Product = () => {
     const [productDetailsBox, setProductDetailsBox] = useState(false);
     const [productData, setProductData] = useState()
     const [data, setData] = useState('')
+    const [selectedValue, setSelectedValue] = useState('');
     useEffect(()=> {
         const fetchData = async() => {
             try {
                 const response = await axios.get(`${url}/api/products`);
-                // console.log(response.data);
+                console.log(response.data);
                 setProductData(response.data)
             } catch (err) {
                 console.log(err);
@@ -54,22 +56,36 @@ const Product = () => {
     
         return average; // Return the average rating if needed
     };
-    
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+    const options = [
+        { value: '', label: 'All' },
+        { value: 'redmi', label: 'Redmi' },
+        { value: 'sumsung', label: 'Sumsung' },
+        { value: 'oppo', label: 'Oppo' },
+    ];  
 
     return (
         <>
             { productData ? 
-                <section className="p-14 pt-28 max-md:p-0 max-md:pt-24 h-auto min-h-screen">
+                <section className="p-14 pt-36 max-md:p-0 max-md:pt-24 h-auto min-h-screen">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
                         <div className="flex flex-wrap gap-2 justify-left">
+                            <div className='absolute top-24 left-1/3 ml-40'>
+                                <Dropdown name='abc' selectedValue={selectedValue} handleChange={handleChange} options={options} />
+                            </div>
                             {productData && productData.map(item => (
+                                (item.type === selectedValue || selectedValue === '') && 
                                 <div className="w-56 max-md:w-48 max-sm:w-[48%]  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                     <div className="rounded overflow-hidden mb-2">
                                         <img 
                                             src={`${url}/uploads/${item.image}`} 
                                             alt={item.name}
-                                            className="h-44 max-sm:h-36 w-full object-cover"
+                                            className="h-44 max-sm:h-36 w-full"
                                         />
                                     </div>
                                     <div>

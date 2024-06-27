@@ -2,10 +2,22 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import Dropdown from '../Dropdown';
 
 const AddProduct = ({ ToggleBox }) => {
   const url = process.env.REACT_APP_API_URL;
   const [load, setLoad] = useState(false);
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleChange = (event) => {
+      setSelectedValue(event.target.value);
+  };
+
+  const options = [
+      { value: 'redmi', label: 'Redmi' },
+      { value: 'sumsung', label: 'Sumsung' },
+      { value: 'oppo', label: 'Oppo' },
+  ];   
 
   const initialValues = {
     productName: '',
@@ -29,6 +41,8 @@ const AddProduct = ({ ToggleBox }) => {
     formData.append('productType', values.productType);
     formData.append('productRate', values.productRate);
     formData.append('productImage', values.productImage);
+
+    console.log(formData);
 
     setLoad(true);
 
@@ -60,7 +74,7 @@ const AddProduct = ({ ToggleBox }) => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ setFieldValue, isSubmitting }) => (
+          {({ setFieldValue, isSubmitting, values  }) => (
             <Form className='space-y-4'>
               <div>
                 <label className='block text-sm font-medium text-gray-700'>Enter name of product</label>
@@ -73,11 +87,20 @@ const AddProduct = ({ ToggleBox }) => {
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700'>Enter Type of product</label>
-                <Field
+                <div className='mt-1 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'>
+                  <Dropdown 
+                    name='productType' 
+                    selectedValue={values.selectedValue} 
+                    handleChange={(e) => setFieldValue('productType', e.target.value)} 
+                    options={options}
+                  />
+                </div>
+                {/* <Field
                   name='productType'
                   type='text'
+                  value={selectedValue}
                   className='mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-                />
+                /> */}
                 <ErrorMessage name='productType' component='div' className='text-red-600 text-sm' />
               </div>
               <div>

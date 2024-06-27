@@ -72,43 +72,50 @@ const Reviews = ({}) => {
     }
 
     return (
-        <div className="flex justify-center items-center">                       
-            <div className="fixed inset-0 flex justify-center mt-28 overflow-y-auto">
-                <div className="bg-white rounded-lg p-6 w-full mx-52 max-md:mx-2 min-h-96 shadow-lg">
-                    <div className='relative'>
-                        <div className='absolute -top-5 -right-2 text-2xl text-red-600 z-50 cursor-pointer hover:scale-110'
-                        ><Link to='/admin' >X</Link></div>
-                    </div>
-                    <h2 className="text-xl font-bold mb-4">Fake Reviews</h2>
-                    {fakeReviews.length > 0 ? (
-                        <table className="min-w-full bg-white border border-gray-200">
-                            <thead>
-                                <tr>
-                                    <th className="py-2 px-4 border-b">Total</th>
-                                    <th className="py-2 px-4 border-b">IP Address</th>
-                                    <th className="py-2 px-4 border-b">Avg rating</th>
-                                    <th className="py-2 px-4 border-b">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {fakeReviews.map((review, index) => (
-                                    <tr key={index}>
-                                        <td className="py-2 px-4 border-b">{review.total}</td>
-                                        <td className="py-2 px-4 border-b">{review.user_IP_adress}</td>
-                                        <td className="py-2 px-4 border-b">{vagRatingCalculate(review.ratings)}</td>
-                                        <td className="py-2 px-4 border-b text-red-600 cursor-pointer hover:text-red-700 hover:scale-110"
-                                            onClick={()=>deleteMultipleResources(review.ids)}>Delete</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    ) : (
-                        <p className="text-gray-600">No fake reviews detected.</p>
-                    )}
-                    
+        <>
+            {fakeReviews.length > 0 ?
+                <div className="flex justify-center items-center">                       
+                    <div className="fixed inset-0 flex justify-center mt-28 overflow-y-auto">
+                        <div className="bg-white rounded-lg p-6 w-full mx-52 max-md:mx-2 min-h-96 shadow-lg">
+                            <div className='relative'>
+                                <div className='absolute -top-5 -right-2 text-2xl text-red-600 z-50 cursor-pointer hover:scale-110'
+                                ><Link to='/admin' >X</Link></div>
+                            </div>
+                            <h2 className="text-xl font-bold mb-4">Fake Reviews</h2>
+                            {fakeReviews.length > 0 ? (
+                                <table className="min-w-full bg-white border border-gray-200">
+                                    <thead>
+                                        <tr>
+                                            <th className="py-2 px-4 border-b">Total</th>
+                                            <th className="py-2 px-4 border-b">IP Address</th>
+                                            <th className="py-2 px-4 border-b">Avg rating</th>
+                                            <th className="py-2 px-4 border-b">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {fakeReviews.map((review, index) => (
+                                            <tr key={index}>
+                                                <td className="py-2 px-4 border-b">{review.total}</td>
+                                                <td className="py-2 px-4 border-b">{review.user_IP_adress}</td>
+                                                <td className="py-2 px-4 border-b">{vagRatingCalculate(review.ratings)}</td>
+                                                <td className="py-2 px-4 border-b text-red-600 cursor-pointer hover:text-red-700 hover:scale-110"
+                                                    onClick={()=>deleteMultipleResources(review.ids)}>Delete</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            ) : (
+                                <p className="text-gray-600">No fake reviews detected.</p>
+                            )}
+                            
+                        </div>
+                    </div>            
+                </div> :
+                <div className='absolute top-80 left-1/2 -ml-40 max-md:-ml-36 text-2xl text-gray-400 font-bold'>
+                    No Fake reviews detected.
                 </div>
-            </div>            
-        </div>
+            }
+        </>
     );
 };
 

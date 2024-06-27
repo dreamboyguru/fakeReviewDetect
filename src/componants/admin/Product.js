@@ -77,7 +77,7 @@ const Products = () => {
         {box && <AddProduct ToggleBox={ToggleBox}/> }
         {/* {reviewsBox && <Reviews ReviewsToggleBox={ReviewsToggleBox} /> } */}
         <button 
-            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 fixed`}
+            className={`bg-gray-600 rounded-md hover:bg-slate-800 text-white p-2 px-5 mt-28 max-md:mt-24 hover:scale-105 duration-500 ${box ? 'blur -mt-20 z-20' : '' } -ml-24 max-md:-ml-12 fixed`}
             onClick={()=>ToggleBox()}            
         >Add New</button>
         {/* <button 
@@ -117,10 +117,8 @@ const Products = () => {
                     </div>
                 </div>
             </section> :
-            <div className="h-screen flex justify-center items-center">
-                <div className="text-center text-gray-500 text-xl">
-                    No Product Detected
-                </div>
+            <div className='absolute top-80 left-1/2 -ml-24 max-md:-ml-16 text-2xl text-gray-400 font-bold'>
+                No Products
             </div>
         }
 

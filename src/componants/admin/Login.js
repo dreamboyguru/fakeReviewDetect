@@ -39,8 +39,8 @@ const Login = () => {
         <>
             {admin === 'true' ?
                 <AdminHeader /> :
-                <div className="min-h-screen flex items-center -mt-20 justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-md w-full space-y-8 bg-white px-5 pb-5 rounded-md shadow-lg">
+                <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-md w-full space-y-8 bg-white px-5 pb-5 -mt-28 rounded-md shadow-lg">
                         <div>
                             <h2 className="mt-6 text-center text-3xl max-md:text-2xl font-extrabold text-gray-950">Sign in to Admin account</h2>
                         </div>
@@ -87,16 +87,16 @@ const Login = () => {
                                         required
                                         className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" 
                                     />
-                                    <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+                                    <label htmlFor="remember-me" className="ml-2 block font-semibold text-sm text-indigo-600 hover:text-indigo-500">
                                         Remember me
                                     </label>
                                 </div>
 
-                                <div className="text-sm">
+                                {/* <div className="text-sm">
                                     <a aria-disabled className="font-medium text-indigo-600 hover:text-indigo-500">
                                         Forgot your password?
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div>
