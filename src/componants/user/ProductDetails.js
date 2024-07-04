@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReviewPage from './Review'
 import Rating from '../Rating';
-import { FaMinus, FaMinusCircle, FaMoneyBillWave, FaPlus, FaPlusCircle, FaShoppingCart } from 'react-icons/fa';
+import { FaMinus, FaMinusCircle, FaMoneyBillWave, FaPlus, FaPlusCircle, FaRupeeSign, FaShoppingCart } from 'react-icons/fa';
 import axios from 'axios';
 import { json } from 'react-router-dom';
 
@@ -85,8 +85,8 @@ const ProductDetails = ({data, modelShow}) => {
                                 <span className='flex justify-center w-1/2 text-yellow-600'><Rating value={avgToggle(data.rating) || 0} /></span> 
                             </span>
                             <label><span className='font-semibold'>Total Reviews : </span>{data.rating !== null ? data.rating.split(',').length : 0}</label>
-                            <label><span className='font-semibold'>Type : </span>{data?.type}</label>
-                            <label><span className='font-semibold'>Price : </span>{data?.rate}</label>
+                            <label><span className='font-semibold'>Brand : </span>{data?.type}</label>
+                            <label><span className='font-semibold'>Price : <FaRupeeSign className="inline-block -mt-1"/></span>{data?.rate}</label>
                             <label><span className='font-semibold'>Description : </span>{data?.description}</label>
                             
                             

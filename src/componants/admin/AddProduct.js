@@ -97,7 +97,7 @@ const AddProduct = ({ ToggleBox }) => {
                 <ErrorMessage name='productName' component='div' className='text-red-600 text-sm' />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700'>Enter Type of product</label>
+                <label className='block text-sm font-medium text-gray-700'>Enter Brand of product</label>
                 <div className='mt-1 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'>
                   <Dropdown 
                     name='productType' 
