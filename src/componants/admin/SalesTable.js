@@ -42,8 +42,12 @@ const SalesTable = () => {
                                 </td>
                                 <td className="w-1/3 py-2 px-6 max-md:px-2 text-md max-md:text-xs text-gray-700 items-stretch space-y-2 border-2">
                                     <div>
-                                    <label className="font-semibold">Product : </label>
-                                    <span>{sale.product_name}</span>
+                                        <label className="font-semibold">Product : </label>
+                                        <span>{sale.product_name}</span>
+                                    </div>
+                                    <div>
+                                        <label className="font-semibold">Product : </label>
+                                        <span>{sale.type.charAt(0).toUpperCase()+sale.type.slice(1)}</span>
                                     </div>
                                     <div>
                                     <label className="font-semibold">Price : </label>

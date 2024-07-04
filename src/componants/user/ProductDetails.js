@@ -87,7 +87,8 @@ const ProductDetails = ({data, modelShow}) => {
                             <label><span className='font-semibold'>Total Reviews : </span>{data.rating !== null ? data.rating.split(',').length : 0}</label>
                             <label><span className='font-semibold'>Type : </span>{data?.type}</label>
                             <label><span className='font-semibold'>Price : </span>{data?.rate}</label>
-
+                            <label><span className='font-semibold'>Description : </span>{data?.description}</label>
+                            
                             
                             <div className="flex flex-col items-center w-full">
                                 {/* <div className="flex items-center justify-center w-1/2 max-md:w-full ml-8 max-md:-ml-5 mb-4">
@@ -122,13 +123,13 @@ const ProductDetails = ({data, modelShow}) => {
                                     <FaShoppingCart className="mr-2" />
                                     {added ? 'Added to Cart' : 'Add to Cart'}
                                     </button>
-                                    <button
+                                    {/* <button
                                     className="flex items-center justify-center bg-green-500 hover:bg-green-700 text-white text-lg max-md:text-lg px-6 py-2 rounded-md focus:outline-none"
                                     onClick={()=>handleByCart(data)}
                                     >
                                     <FaMoneyBillWave className="mr-2" />
                                     Buy Now
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                             {/* <h1><span className='font-semibold'>Product Details : </span><span>In marketing, a product is an object, or system, or service made available for consumer use as of the consumer demand; it is anything that can be offered to a market to satisfy the desire or need of a customer.</span></h1> */}

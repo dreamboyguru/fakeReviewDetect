@@ -63,15 +63,22 @@ const Product = () => {
 
     const options = [
         { value: '', label: 'All' },
-        { value: 'redmi', label: 'Redmi' },
+        { value: 'xiaomi', label: 'Xiaomi' },
         { value: 'sumsung', label: 'Sumsung' },
         { value: 'oppo', label: 'Oppo' },
+        { value: 'onePlus', label: 'OnePlus' },
+        { value: 'realme', label: 'Realme' },
+        { value: 'vivo', label: 'Vivo' },
+        { value: 'apple', label: 'Apple' },
+        { value: 'nokia', label: 'Nokia' },
+        { value: 'motorola', label: 'Motorola' },
     ];  
 
     return (
         <>
+            <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Prodcut Detection</h1>
             { productData ? 
-                <section className="py-14 pl-16 pt-36 max-md:p-0 max-md:pt-28 h-auto min-h-screen">
+                <section className="py-14 pl-16 pt-28 max-md:p-0 max-md:pt-28 h-auto min-h-screen">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
                     <div className={`rounded-lg p-1 ${productDetailsBox ? 'blur' : ''}`}>
                         <div className="flex flex-wrap gap-2 justify-left">
@@ -80,7 +87,9 @@ const Product = () => {
                             </div>
                             {productData && productData.map(item => (
                                 (item.type === selectedValue || selectedValue === '') && 
-                                <div className="w-56 max-md:w-48 max-sm:w-[48%] max-md:ml-0.5  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
+                                <div 
+                                    onClick={()=>productDetailsShow(item)} 
+                                    className="w-56 max-md:w-48 max-sm:w-[48%] max-md:ml-0.5  bg-white  p-2 max-sm:p-2 h-auto rounded-lg shadow-lg" key={item.id}>
                                     <div className="rounded overflow-hidden mb-2">
                                         <img 
                                             src={`${url}/uploads/${item.image}`} 
@@ -97,8 +106,7 @@ const Product = () => {
                                                 </span>
 
                                             </div>
-                                            <span 
-                                                onClick={()=>productDetailsShow(item)} 
+                                            <span
                                                 className="text-blue-500 hover:cursor-pointer hover:underline"
                                             >Details</span>
                                         </div>

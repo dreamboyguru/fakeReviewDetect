@@ -15,9 +15,15 @@ const AddProduct = ({ ToggleBox }) => {
   };
 
   const options = [
-      { value: 'redmi', label: 'Redmi' },
+      { value: 'xiaomi', label: 'Xiaomi' },
       { value: 'sumsung', label: 'Sumsung' },
       { value: 'oppo', label: 'Oppo' },
+      { value: 'onePlus', label: 'OnePlus' },
+      { value: 'realme', label: 'Realme' },
+      { value: 'vivo', label: 'Vivo' },
+      { value: 'apple', label: 'Apple' },
+      { value: 'nokia', label: 'Nokia' },
+      { value: 'motorola', label: 'Motorola' },
   ];   
 
   const initialValues = {
@@ -34,6 +40,7 @@ const AddProduct = ({ ToggleBox }) => {
     productType: Yup.string().required('Product type is required'),
     productRate: Yup.number().required('Product rate is required'),
     productImage: Yup.mixed().required('Product image is required'),
+    description: Yup.string().max(150, 'Must be 150 characters or less').required('Required'),
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
@@ -42,9 +49,11 @@ const AddProduct = ({ ToggleBox }) => {
     formData.append('productType', values.productType);
     formData.append('productRate', values.productRate);
     formData.append('productImage', values.productImage);
+    formData.append('description', values.description);
 
     // console.log(formData);
     // console.log(values);
+    // return
 
     setLoad(true);
 
@@ -125,6 +134,15 @@ const AddProduct = ({ ToggleBox }) => {
                   }}
                 />
                 <ErrorMessage name='productImage' component='div' className='text-red-600 text-sm' />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>Enter Details of product</label>
+                <Field
+                  as='textarea'
+                  name='description'
+                  className='mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                />
+                <ErrorMessage name='description' component='div' className='text-red-600 text-sm' />
               </div>
               <div>
                 {load ? (
