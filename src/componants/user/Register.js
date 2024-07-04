@@ -1,13 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import img1 from '../../img/HomeImg/14139953_5344698.png'
+// import img3 from '../../img/HomeImg/blog-how-to-spot-fake-reviews-preview.jpg'
+import img2 from '../../img/HomeImg/cbsn-fusion-ftc-cracking-down-on-fake-online-reviews-thumbnail-2114384-640x360.jpg'
 
+const images = [
+    `url(${img1})`,
+    `url(${img2})`,
+    // `url(${img3})`,
+  ];
 const Register = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [Err, setErr] = useState(null);
     const navigate = useNavigate();
     const url = process.env.REACT_APP_API_URL;
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 5 seconds
+  
+      return () => clearInterval(interval);
+    }, []);
 
     const initialValues = {
         name: '',
@@ -46,8 +63,15 @@ const Register = () => {
         window.location.reload();
     }
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-md w-full space-y-8 bg-white px-5 -mt-28 pb-4 rounded-md shadow-lg">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+            style={{
+                backgroundImage: images[currentIndex],
+                backgroundRepeat: 'no-repeat',
+                width: '100vw', // Full screen width
+                height: '100vh', // Full screen height
+                backgroundSize: 'cover', // Ensure the image covers the entire screen
+            }}>
+            <div className="max-w-md w-full space-y-8 bg-white px-5 -mt-28 pb-4 rounded-md shadow-lg opacity-90">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-950">Sign up your account</h2>
                 </div>

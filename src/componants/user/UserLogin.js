@@ -16,12 +16,20 @@ const images = [
 
 const UserLogin = () => {
     // console.log(`Width: ${window.screen.width}px, Height: ${window.screen.height}px`);
-
+    const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [err, setErr] = useState('');
     const [regBox, setRegBox] = useState(false);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 5 seconds
+  
+      return () => clearInterval(interval);
+    }, []);
 
     const url = process.env.REACT_APP_API_URL;
 
@@ -53,16 +61,6 @@ const UserLogin = () => {
         setRegBox(true);
     }
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
     return (
         regBox ? <Register /> :
             <div className="w-screen min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
@@ -73,7 +71,7 @@ const UserLogin = () => {
                     height: '100vh', // Full screen height
                     backgroundSize: 'cover', // Ensure the image covers the entire screen
                 }}>
-                <div className="max-w-md w-full space-y-8 bg-white px-5 pb-5 -mt-28 rounded-md shadow-lg">
+                <div className="max-w-md w-full space-y-8 bg-white px-5 pb-5 -mt-28 rounded-md shadow-lg opacity-90">
                     <div>
                         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-950">Sign in to your account</h2>
                     </div>
