@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import Register from './Register';
 import axios from 'axios';
 import img1 from '../../img/HomeImg/14139953_5344698.png'
-import img2 from '../../img/HomeImg/blog-how-to-spot-fake-reviews-preview.jpg'
-import img3 from '../../img/HomeImg/cbsn-fusion-ftc-cracking-down-on-fake-online-reviews-thumbnail-2114384-640x360.jpg'
+// import img3 from '../../img/HomeImg/blog-how-to-spot-fake-reviews-preview.jpg'
+import img2 from '../../img/HomeImg/cbsn-fusion-ftc-cracking-down-on-fake-online-reviews-thumbnail-2114384-640x360.jpg'
 
 const images = [
     `url(${img1})`,
     `url(${img2})`,
-    `url(${img3})`,
+    // `url(${img3})`,
   ];
 
 const UserLogin = () => {
