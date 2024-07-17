@@ -76,7 +76,7 @@ const Product = () => {
 
     return (
         <>
-            <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Prodcut Detection</h1>
+            <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Product Review Monitoring</h1>
             { productData ? 
                 <section className="py-14 pl-16 pt-28 max-md:p-0 max-md:pt-28 h-auto min-h-screen border-none">
                     {productDetailsBox && <ProductDetails modelShow={modelShow} data={data}/> }
@@ -117,7 +117,7 @@ const Product = () => {
                     </div>
                 </section> :
                 <div className="h-screen flex justify-center items-center">
-                    <div className="text-center text-gray-500 text-xl">
+                    <div className="text-center text-gray-400 text-2xl font-bold -mt-4">
                         No Product Detected
                     </div>
                 </div>

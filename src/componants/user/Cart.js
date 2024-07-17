@@ -71,7 +71,7 @@ const CartPage = () => {
 
     return (
         <>
-            <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Review Detection</h1>
+            <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Product Review Monitoring</h1>
             {products.length > 0 ?
                 <div className="container mx-auto pt-20 max-md:pt-14 flex justify-center">
                     <div className='w-1/2 max-md:w-full shadow-lg bg-white px-4 py-4'>

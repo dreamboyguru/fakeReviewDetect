@@ -25,7 +25,7 @@ const PurchaseHistory = () => {
 
   return (
     <>
-      <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Review Detection</h1>
+      <h1 className='font-semibold text-2xl text-gray-500 font-mono'>Fake Product Review Monitoring</h1>
       <div className="w-[90%] max-md:w-[98%] mx-20 max-md:mx-1 pt-20 max-md:pt-16 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         
         {purchases.map((purchase) => (
