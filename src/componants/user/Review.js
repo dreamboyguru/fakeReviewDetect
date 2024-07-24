@@ -9,7 +9,8 @@ const ReviewPage = (data) => {
     const [rating, setRating] = useState(0);
     const [load, setLoad] = useState(false);
     const [ip, setIp] = useState('');
-
+    const userData = JSON.parse(localStorage.getItem('userData'))
+    
     useEffect(() => {
         axios.get('https://api.ipify.org?format=json')
           .then(response => {
@@ -42,11 +43,13 @@ const ReviewPage = (data) => {
         if (newReview.trim() !== '') {
             const reviewObject = {
                 id : data.value.id,
+                user_id : userData.id,
                 review: newReview,
                 rating: parseFloat(rating),
                 ip : ip
             };
     
+            // console.log(reviewObject);
             try {
                 await axios.post(`${url}/api/rating`, reviewObject)                
                 setNewReview('');
@@ -112,7 +115,8 @@ const ReviewPage = (data) => {
                 ) : (
                     <ul>
                         {reviews.map((review, index) => (
-                            <li key={index} className="bg-gray-100 p-4 mb-2 rounded">                                
+                            <li key={index} className="bg-gray-100 p-4 mb-2 rounded">
+                                <p className='flex justify-start'><spam className='font-bold pr-2'>Name : </spam>{review?.name}</p>           
                                 <div className='w-1/4 mb-2'><p><Rating value={review.rating} /></p></div>
                                 <p className='flex justify-start'>{review.details}</p>
                             </li>
